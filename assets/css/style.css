@@ -1,0 +1,60 @@
+/* CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.custom-navbar {
+  background-color: #343a40;
+}
+
+.custom-header {
+  background: linear-gradient(to right, #360370, #4a0c52);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.custom-header h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.custom-header h2 {
+  font-size: 1.6rem; /* era probablemente 1.5rem por defecto */
+  font-weight: 400;
+
+}
+
+.custom-main {
+  padding: 40px 20px;
+}
+
+.custom-main section {
+  margin-bottom: 3rem; /* o el valor que prefieras */
+}
+
+
+.custom-footer {
+  background-color: #343a40;
+  padding: 20px;
+  text-align: center;
+  color: #8a939a;
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .custom-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .custom-main {
+    padding: 1rem;
+  }
+}
