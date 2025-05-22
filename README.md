@@ -27,11 +27,11 @@ Incluye:
 
 ## 🧠 Perfil Profesional
 
-> Psicopedagoga con más de 5 años de experiencia en proyectos socioeducativos. Mi formación reciente en Full Stack Python me permite vincular educación y tecnología para aportar en proyectos con impacto social.
+> Psicopedagoga con más de 5 años de experiencia en proyectos socioeducativos. Anteriormente, trabajé por más de 15 años en educación artpistica como Profesora de Danza(ARCIS, 2022), tanto en proyectos estatales como independiente. Mi formación reciente en Full Stack Python me permite vincular educación y tecnología para aportar en proyectos con impacto social y creativo.
 
 ## 🔗 Enlaces Importantes
 
-- **GitHub:** [@SrWoonejos](https://github.com/SrWoonejos)
+- **GitHub:** [@SrWoonejos](https://srwoonejos.github.io/DanielaMiranda_CV2025/)
 - **LinkedIn:** [Daniela Miranda M.](https://www.linkedin.com/in/daniela-miranda-m/)
 - **Correo:** danmirandam@gmail.com / danimiranda_psp@proton.me
 - **WhatsApp:** [+56 9 9509 6369](https://wa.me/56995096369)
@@ -42,7 +42,7 @@ Incluye:
 
 ## 🚀 Cómo Ver el Proyecto
 
-Puedes ver la versión en vivo en GitHub Pages (https://srwoonejos.github.io/Cv_DanielaMiranda/):
+Puedes ver la versión en vivo en GitHub Pages (https://srwoonejos.github.io/DanielaMiranda_CV2025/):
 
 
 
@@ -65,8 +65,7 @@ Puedes ver la versión en vivo en GitHub Pages (https://srwoonejos.github.io/Cv_
 
 ## 📅 Próximas Mejoras (To-Do)
 
-- [ ] Agregar sección de portafolio de proyectos
-- [ ] Conectar con API de LinkedIn o GitHub
+- [ ] Agregar sección de portafolio de proyectos conectados con Github
 - [ ] Internacionalización (i18n) para versión en inglés
 - [ ] Implementar modo oscuro/manual
 
