@@ -1,4 +1,4 @@
-/* CSS */
+/* CSS General */
 * {
   margin: 0;
   padding: 0;
@@ -27,9 +27,8 @@ body {
 }
 
 .custom-header h2 {
-  font-size: 1.6rem; /* era probablemente 1.5rem por defecto */
+  font-size: 1.6rem;
   font-weight: 400;
-
 }
 
 .custom-main {
@@ -37,9 +36,8 @@ body {
 }
 
 .custom-main section {
-  margin-bottom: 3rem; /* o el valor que prefieras */
+  margin-bottom: 3rem;
 }
-
 
 .custom-footer {
   background-color: #343a40;
@@ -49,6 +47,7 @@ body {
   margin-top: auto;
 }
 
+/* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
   .custom-header h1 {
     font-size: 1.5rem;
@@ -59,23 +58,167 @@ body {
   }
 }
 
-/* Modo claro (por defecto) */
-body.light-mode {
-  background-color: #f8f9fa;
-  color: #212529;
+/* Estilos específicos para impresión */
+@media print {
+  body, html {
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    background: white !important;
+    color: black !important;
+  }
+  
+  .custom-navbar, 
+  .custom-footer {
+    display: none !important;
+  }
+  
+  .custom-header {
+    background: white !important;
+    color: black !important;
+    padding: 10px 0 !important;
+    text-align: left !important;
+  }
+  
+  .custom-header h1 {
+    font-size: 18pt !important;
+    color: black !important;
+    margin-bottom: 5px !important;
+  }
+  
+  .custom-header h2 {
+    font-size: 14pt !important;
+    color: #333 !important;
+  }
+  
+  .custom-header a {
+    color: #333 !important;
+    text-decoration: none !important;
+  }
+  
+  .custom-main {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  section {
+    page-break-inside: avoid;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  p, li {
+    margin-bottom: 0.2rem !important;
+    line-height: 1.2 !important;
+    font-size: 11pt !important;
+  }
+  
+  h2, h3 {
+    margin-top: 0.3rem !important;
+    margin-bottom: 0.3rem !important;
+    page-break-after: avoid;
+  }
+  
+  img {
+    max-width: 150px !important;
+    height: auto !important;
+    filter: grayscale(100%) !important;
+  }
+  
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 80%;
+    font-weight: normal;
+    color: #666;
+  }
+  
+  @page {
+    size: A4;
+    margin: 1cm;
+  }
 }
 
-/* Estilos para el modo oscuro */
-  body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
+/* ... (tus estilos existentes) ... */
+
+/* Estilos específicos para impresión */
+@media print {
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
-  .dark-mode .custom-navbar {
-    background-color: #1f1f1f;
+  
+  /* Oculta elementos no necesarios */
+  .custom-navbar, .custom-footer, #btnDescargarPDF {
+    display: none !important;
   }
-  .dark-mode .custom-header {
-    background-color: #1f1f1f;
+  
+  /* Header optimizado para PDF */
+  #cv-header {
+    padding: 5mm 0 !important;
+    margin-bottom: 3mm !important;
+    background: white !important;
+    color: black !important;
+    border-bottom: 1px solid #ddd !important;
   }
-  .dark-mode .custom-footer {
-    background-color: #1f1f1f;
+  
+  #cv-header img {
+    max-width: 20mm !important;
+    height: auto !important;
+    filter: grayscale(100%) !important;
   }
+  
+  #cv-header h1 {
+    font-size: 14pt !important;
+    margin-bottom: 1mm !important;
+    color: black !important;
+  }
+  
+  #cv-header h2 {
+    font-size: 11pt !important;
+    margin-bottom: 2mm !important;
+    color: #333 !important;
+  }
+  
+  #cv-header p {
+    font-size: 8pt !important;
+    margin-bottom: 0.5mm !important;
+  }
+  
+  /* Main content optimizado */
+  #cv-main {
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 9pt !important;
+  }
+  
+  #cv-main section {
+    margin-bottom: 2mm !important;
+    page-break-inside: avoid !important;
+  }
+  
+  #cv-main h2 {
+    font-size: 11pt !important;
+    margin: 1mm 0 !important;
+    page-break-after: avoid !important;
+  }
+  
+  #cv-main h3 {
+    font-size: 10pt !important;
+    margin: 1mm 0 !important;
+  }
+  
+  #cv-main p, #cv-main li {
+    font-size: 8pt !important;
+    margin-bottom: 0.5mm !important;
+    line-height: 1.1 !important;
+  }
+  
+  #cv-main ul {
+    padding-left: 4mm !important;
+    margin-bottom: 1mm !important;
+  }
+  
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+}
