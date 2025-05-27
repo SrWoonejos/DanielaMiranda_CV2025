@@ -27,18 +27,13 @@ Incluye:
 
 ## 🧠 Perfil Profesional
 
-> Psicopedagoga con más de 5 años de experiencia en proyectos socioeducativos. Anteriormente, trabajé por más de 15 años en educación artpistica como Profesora de Danza(ARCIS, 2022), tanto en proyectos estatales como independiente. Mi formación reciente en Full Stack Python me permite vincular educación y tecnología para aportar en proyectos con impacto social y creativo.
+> Psicopedagoga con más de 5 años de experiencia en proyectos socioeducativos. Anteriormente, trabajé en educación artística como Profesora de Danza, tanto en proyectos estatales como independiente. Mi formación reciente en Full Stack Python me permite vincular la educación, la creatividad y las nuevas tecnologías para aportar en proyectos con impacto social y creativo.
 
 ## 🔗 Enlaces Importantes
 
 - **GitHub:** [@SrWoonejos](https://srwoonejos.github.io/DanielaMiranda_CV2025/)
-- **LinkedIn:** [Daniela Miranda M.](https://www.linkedin.com/in/daniela-miranda-m/)
+- **Portafolio Artístico:** [Daniela Miranda M.](https://www.behance.net/danmirandam/)
 - **Correo:** danmirandam@gmail.com / danimiranda_psp@proton.me
-- **WhatsApp:** [+56 9 9509 6369](https://wa.me/56995096369)
-
-## 📸 Vista Previa
-
-![Vista previa de la web](assets/img/avatarYowebp.webp)
 
 ## 🚀 Cómo Ver el Proyecto
 
