@@ -58,3 +58,24 @@ body {
     padding: 1rem;
   }
 }
+
+/* Modo claro (por defecto) */
+body.light-mode {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+/* Estilos para el modo oscuro */
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  .dark-mode .custom-navbar {
+    background-color: #1f1f1f;
+  }
+  .dark-mode .custom-header {
+    background-color: #1f1f1f;
+  }
+  .dark-mode .custom-footer {
+    background-color: #1f1f1f;
+  }

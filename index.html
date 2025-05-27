@@ -9,6 +9,23 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
+<script>
+  // Aplicar el modo guardado
+  if (localStorage.getItem('darkMode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+    document.getElementById('toggleDarkMode').textContent = '☀️ Modo Claro';
+  }
+
+  document.getElementById('toggleDarkMode').addEventListener('click', function () {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+
+    localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+    this.textContent = isDark ? '☀️ Modo Claro' : '🌙 Modo Oscuro';
+  });
+</script>
+
+<!-- BODY -->
 <body class="d-flex flex-column min-vh-100">
 
   <!-- NAVBAR -->
@@ -27,7 +44,10 @@
           <li class="nav-item"><a class="nav-link" href="#certificados">Certificados</a></li>
           <li class="nav-item">
             <a id="btnDescargarPDF" class="btn btn-outline-light ms-2" href="#">Descarga mi CV (PDF)</a>
-            
+            <li class="nav-item">
+  <button id="toggleDarkMode" class="btn btn-outline-light ms-2">🌙 Modo Oscuro</button>
+</li>
+
           </li>
         </ul>
       </div>
@@ -49,7 +69,7 @@
           <a href="mailto:danimiranda_psp@proton.me" class="text-light">danimiranda_psp@proton.me</a>
         </p>
         <p>
-          LinkedIn: <a href="https://www.linkedin.com/in/daniela-miranda-m/" class="text-light">daniela-miranda-m</a> |
+          Behance: <a href="https://www.behance.net/danmirandam/" class="text-light">Portafolio Danza</a> |
           GitHub: <a href="https://srwoonejos.github.io/DanielaMiranda_CV2025/" class="text-light">/GithubPage</a>
         </p>
         <p>
@@ -74,15 +94,7 @@
     <section id="perfil" class="mb-6">
       <h2 class="text-primary">🎯 Perfil Profesional</h2>
       <p>
-        Psicopedagoga titulada(2021) y Developer en formación. 
-        Mi objetivo es sincronizar los aprendizajes humanos con las nuevas tecnología.
-Con más de 5 años de experiencia en proyectos socioeducativos, 
-desarrollo de habilidades cognitivas, lectoescritura y matemáticas,  
-mi formación reciente en programación Full Stack Python Trainee V2.0(Talento Digital, 2024).
-Estoy lista para crear soluciones que conecten el mundo de la educación 
-con la lógica y sintaxis de los lenguajes de programación. 
-Busco integrarme a un equipo donde pueda aplicar mi visión 
-interdisciplinaria para innovar en proyectos con impacto social y educativo.
+        >Psicopedagoga titulada con más de 5 años de experiencia en proyectos socioeducativos. Anteriormente, trabajé en educación artística como Profesora de Danza, tanto en proyectos estatales como independiente. Mi formación reciente en Full Stack Python me permite vincular la educación, la creatividad y las nuevas tecnologías para aportar en proyectos con impacto social y creativo.
       </p>
     </section>
 
@@ -107,7 +119,7 @@ interdisciplinaria para innovar en proyectos con impacto social y educativo.
       <p><strong>Lenguajes:</strong> Python, JAVA, HTML, CSS</p>
       <p><strong>Frameworks:</strong> Django</p>
       <p><strong>Herramientas:</strong> Office 365, MySQL, ChatGPT, Git, GitHub, ChatGPT</p>
-      <p><strong>Plataformas:</strong> VSCode, Intellij IDEA</p>
+      <p><strong>Plataformas:</strong> VSCode</p>
       <p><strong>Habilidades Blandas:</strong> Empatía, gestión de partes interesadas, liderazgo, comunicación, adaptación curricular</p>
     </section>
 
