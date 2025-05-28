@@ -141,53 +141,47 @@ body {
 
 /* Estilos específicos para impresión */
 @media print {
-  body {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
-  
-  /* Oculta elementos no necesarios */
-  .custom-navbar, .custom-footer, #btnDescargarPDF {
-    display: none !important;
-  }
-  
-  /* Header optimizado para PDF */
-  #cv-header {
-    padding: 5mm 0 !important;
-    margin-bottom: 3mm !important;
+  /* Reset completo para máxima compresión */
+  body, html, #cv-header, #cv-main {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
     background: white !important;
     color: black !important;
-    border-bottom: 1px solid #ddd !important;
+    line-height: 1.1 !important;
+  }
+  
+  /* Header super compacto */
+  #cv-header {
+    padding: 2mm 0 !important;
+    margin-bottom: 2mm !important;
+    border-bottom: 0.5px solid #ddd !important;
   }
   
   #cv-header img {
-    max-width: 20mm !important;
+    width: 15mm !important;
     height: auto !important;
     filter: grayscale(100%) !important;
   }
   
   #cv-header h1 {
-    font-size: 14pt !important;
-    margin-bottom: 1mm !important;
-    color: black !important;
+    font-size: 12pt !important;
+    margin: 1mm 0 !important;
   }
   
   #cv-header h2 {
-    font-size: 11pt !important;
-    margin-bottom: 2mm !important;
-    color: #333 !important;
+    font-size: 10pt !important;
+    margin: 1mm 0 !important;
   }
   
   #cv-header p {
-    font-size: 8pt !important;
-    margin-bottom: 0.5mm !important;
+    font-size: 7pt !important;
+    margin: 0.5mm 0 !important;
   }
   
-  /* Main content optimizado */
+  /* Contenido principal ultra compacto */
   #cv-main {
-    padding: 0 !important;
-    margin: 0 !important;
-    font-size: 9pt !important;
+    font-size: 8pt !important;
   }
   
   #cv-main section {
@@ -196,29 +190,29 @@ body {
   }
   
   #cv-main h2 {
-    font-size: 11pt !important;
+    font-size: 10pt !important;
     margin: 1mm 0 !important;
     page-break-after: avoid !important;
   }
   
   #cv-main h3 {
-    font-size: 10pt !important;
+    font-size: 9pt !important;
     margin: 1mm 0 !important;
   }
   
   #cv-main p, #cv-main li {
-    font-size: 8pt !important;
+    font-size: 7.5pt !important;
     margin-bottom: 0.5mm !important;
-    line-height: 1.1 !important;
   }
   
   #cv-main ul {
     padding-left: 4mm !important;
-    margin-bottom: 1mm !important;
+    margin: 1mm 0 !important;
   }
   
+  /* Configuración de página */
   @page {
     size: A4;
-    margin: 10mm;
+    margin: 5mm;
   }
 }
