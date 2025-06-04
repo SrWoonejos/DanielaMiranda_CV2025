@@ -14,7 +14,7 @@ body {
 }
 
 .custom-header {
-  background: linear-gradient(to right, #360370, #4a0c52);
+  background: linear-gradient(to right, #360370, #9e36ac);
   color: white;
   padding: 60px 20px;
   text-align: center;
@@ -57,91 +57,15 @@ body {
     padding: 1rem;
   }
 }
-
-/* Estilos específicos para impresión */
-@media print {
-  body, html {
-    width: 100% !important;
-    height: auto !important;
-    overflow: visible !important;
-    background: white !important;
-    color: black !important;
-  }
-  
-  .custom-navbar, 
-  .custom-footer {
-    display: none !important;
-  }
-  
-  .custom-header {
-    background: white !important;
-    color: black !important;
-    padding: 10px 0 !important;
-    text-align: left !important;
-  }
-  
-  .custom-header h1 {
-    font-size: 18pt !important;
-    color: black !important;
-    margin-bottom: 5px !important;
-  }
-  
-  .custom-header h2 {
-    font-size: 14pt !important;
-    color: #333 !important;
-  }
-  
-  .custom-header a {
-    color: #333 !important;
-    text-decoration: none !important;
-  }
-  
-  .custom-main {
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-  
-  section {
-    page-break-inside: avoid;
-    margin-bottom: 0.5rem !important;
-  }
-  
-  p, li {
-    margin-bottom: 0.2rem !important;
-    line-height: 1.2 !important;
-    font-size: 11pt !important;
-  }
-  
-  h2, h3 {
-    margin-top: 0.3rem !important;
-    margin-bottom: 0.3rem !important;
-    page-break-after: avoid;
-  }
-  
-  img {
-    max-width: 150px !important;
-    height: auto !important;
-    filter: grayscale(100%) !important;
-  }
-  
-  a::after {
-    content: " (" attr(href) ")";
-    font-size: 80%;
-    font-weight: normal;
-    color: #666;
-  }
-  
-  @page {
-    size: A4;
-    margin: 1cm;
+@media (max-width: 991.98px) {
+  #cv-navbar .navbar-nav {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }
 
-/* ... (tus estilos existentes) ... */
-
 /* Estilos específicos para impresión */
 @media print {
-  /* Reset completo para máxima compresión */
   body, html, #cv-header, #cv-main {
     width: 100% !important;
     margin: 0 !important;
@@ -149,70 +73,150 @@ body {
     background: white !important;
     color: black !important;
     line-height: 1.1 !important;
+    height: auto !important;
+    overflow: visible !important;
   }
-  
-  /* Header super compacto */
+
+  #cv-navbar, .custom-navbar, .custom-footer {
+    display: none !important;
+  }
+
+  /* Header compacto */
   #cv-header {
+    background: white !important;
+    color: black !important;
     padding: 2mm 0 !important;
     margin-bottom: 2mm !important;
     border-bottom: 0.5px solid #ddd !important;
+    text-align: left !important;
   }
-  
+
   #cv-header img {
     width: 15mm !important;
     height: auto !important;
     filter: grayscale(100%) !important;
   }
-  
+
   #cv-header h1 {
     font-size: 12pt !important;
     margin: 1mm 0 !important;
+    color: black !important;
   }
-  
+
   #cv-header h2 {
     font-size: 10pt !important;
     margin: 1mm 0 !important;
+    color: #333 !important;
   }
-  
+
   #cv-header p {
     font-size: 7pt !important;
     margin: 0.5mm 0 !important;
   }
-  
-  /* Contenido principal ultra compacto */
+
+  #cv-header a {
+    color: #333 !important;
+  }
+
+  /* Contenido principal compacto */
   #cv-main {
     font-size: 8pt !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
-  
+
   #cv-main section {
     margin-bottom: 2mm !important;
     page-break-inside: avoid !important;
   }
-  
+
   #cv-main h2 {
     font-size: 10pt !important;
     margin: 1mm 0 !important;
     page-break-after: avoid !important;
   }
-  
+
   #cv-main h3 {
     font-size: 9pt !important;
     margin: 1mm 0 !important;
   }
-  
+
   #cv-main p, #cv-main li {
     font-size: 7.5pt !important;
     margin-bottom: 0.5mm !important;
+    line-height: 1.2 !important;
   }
-  
+
   #cv-main ul {
     padding-left: 4mm !important;
     margin: 1mm 0 !important;
   }
-  
+
+  section {
+    page-break-inside: avoid;
+    margin-bottom: 0.5rem !important;
+  }
+
+  p, li {
+    margin-bottom: 0.2rem !important;
+    line-height: 1.2 !important;
+    font-size: 11pt !important;
+  }
+
+  h2, h3 {
+    margin-top: 0.3rem !important;
+    margin-bottom: 0.3rem !important;
+    page-break-after: avoid;
+  }
+
+  img {
+    max-width: 150px !important;
+    height: auto !important;
+    filter: grayscale(100%) !important;
+  }
+
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 80%;
+    font-weight: normal;
+    color: #666;
+  }
+
   /* Configuración de página */
   @page {
     size: A4;
     margin: 5mm;
+  }
+}
+
+/* --- Navbar lateral izquierdo en modo responsive --- */
+@media (max-width: 991.98px) {
+  #cv-navbar {
+    position: relative;
+    z-index: 1050;
+  }
+
+  #navbarNav {
+    position: absolute;
+    top: 56px; /* Altura típica del navbar */
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 56px);
+    background-color: #343a40;
+    padding: 1rem;
+    overflow-y: auto;
+    border-right: 1px solid #222;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1040;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* Estilo para cerrar el colapso tras hacer clic */
+  #navbarNav.show {
+    display: block;
   }
 }
